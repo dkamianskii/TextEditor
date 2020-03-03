@@ -41,5 +41,7 @@ int CALLBACK  wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR szCmdLine, int nCmd
         TranslateMessage(&msg); // функция расшифровывает системное сообщение
         DispatchMessage(&msg);  // функция  передаёт сообщение в оконную процедуру на обработку
     }
+
+    return static_cast<int> (msg.wParam);
 }
 
